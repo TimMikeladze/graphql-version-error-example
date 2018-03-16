@@ -1,0 +1,31 @@
+{
+  "name": "directives",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "typings": "dist/index.d.ts",
+  "typescript": {
+    "definition": "dist/index.d.ts"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "compile": "tsc",
+    "pretest": "yarn run clean && yarn run compile",
+    "test": "yarn run testonly --",
+    "watch": "tsc -w"
+  },
+  "peerDependencies": {
+    "graphql": "^0.11.0 || ^0.12.0 || ^0.13.0"
+  },
+  "devDependencies": {
+    "@intelight/tslint": "^0.0.9",
+    "@types/graphql": "^0.12.5",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^2.23.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  },
+  "resolutions": {
+    "graphql": "0.13.2"
+  }
+}
